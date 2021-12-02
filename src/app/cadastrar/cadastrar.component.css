@@ -1,0 +1,20 @@
+#img-bg {
+  background-image: url('https://img.besthqwallpapers.com/Uploads/21-8-2020/140232/moss-texture-4k-macro-plant-textures-natural-moss.jpg');
+
+  min-height: 950px;
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.8;
+}
+
+#gradient-bg {
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    to left,
+    rgb(4, 0, 73) 0%,
+    rgba(12, 218, 170, 0) 0%,
+    rgba(104, 212, 100, 0.387) 100%
+  );
+}
