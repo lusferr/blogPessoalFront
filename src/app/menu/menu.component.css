@@ -6,3 +6,16 @@
  a{
    cursor: pointer;
  }
+
+ #navbar{
+   display: flex;
+   justify-content: space-between;
+   padding-left: 5%;
+   padding-right: 10%;
+
+   background-color: #f0f2f5;
+   box-shadow: 0 0 5px 0 rgb(126, 125, 125);
+
+ }
+
+

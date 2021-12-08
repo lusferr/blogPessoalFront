@@ -1,26 +1,40 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-dark">
-    <div class="container-fluid">
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto d-flex align-items-center">
-                <li class="nav-item">
-                    <img src="{{foto}}" alt="imagem do user" width="50px" height="50px" class="img-fluid rounded-circle">
-                </li>
-                <li class="nav-item pl-3">
-                    <p class="m-0 font-weight-bold text-white fs-16">{{nome}}</p>
-                </li>
-                <li class="nav-item pl-3 pt-3">
-                  <p><i class="fas fa-edit text-white fs-10 m-o" aria-hidden="true"></i></p>
-                </li>
-            </ul>
-            <ul class="navbar-nav ml-auto d-flex align-items-center">
-              <li>
-                <a (click)='sair()' class="m-0 font-weight-bold text-white fs-16">Sair <i class="fa fa-sign-out"></i></a>
-              </li>
-            </ul>
-        </div>
+<!-- ATUALIZANDO NAVE BAR -->
+
+<nav class="navbar navbar-expand-lg navbar-light" id="navbar">
+
+  <!-- DIV PARA NOME E ICON -->
+  <div class="d-flex">
+    <!-- ICON CODE  -->
+    <i class="fas fa-terminal text-black fs-18 m-o mt-1"></i>
+    <!-- NOME USUARIO -->
+    <p class="m-0 font-weight-bold text-black fs-18 pl-3">{{nome}}</p>
+  </div>
+
+
+  <!-- ICON HOME -->
+  <a routerLink="/inicio"><i class="fas fa-home fs-18 m-o text-dark"></i></a>
+
+
+  <!-- BOTÃO OPÇÕES -->
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+    aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="dropdown ">
+
+    <img class="navbar-brand img-fluid rounded-circle" src="{{foto}}" width="50px" height="50px">
+
+    <i class="dropdown fas fa-bars text-black fs-10 m-o" type="button" id="dropdownMenu2" data-toggle="dropdown"
+      aria-haspopup="true" aria-expanded="false">
+    </i>
+    <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+      <button class="dropdown-item" type="button">Editar perfil</button>
+      <p class="dropdown-item" type="button"><a (click)='sair()' class="m-0 ">Sair</a></p>
+
     </div>
+  </div>
+
+
+
 </nav>

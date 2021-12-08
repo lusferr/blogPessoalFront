@@ -9,7 +9,16 @@
 
 }
 
+#bg-fundo{
+  background-image: url("https://i.pinimg.com/564x/fb/e2/51/fbe25108ae26c7fa7e01e74c22208194.jpg");
 
+  background-size: 300px;
+
+
+  background-repeat: repeat-x;
+  padding-bottom: 365px;
+  background-color: white;
+}
 
 
 
@@ -21,6 +30,27 @@
     rgba(12, 218, 170, 0) 0%,
     rgba(104, 212, 100, 0.387) 100%
   );
+}
+
+#entrar{
+  margin-left: 20%;
+  margin-top: 10%;
+  border-radius: 1rem;
+  background-color: #f0f2f5;
+  box-shadow: 5px 5px 5px 5px rgb(126, 125, 125);
+}
+
+#btn-entrar{
+  padding: 1% 40%;
+}
+
+#lateralEntrar{
+  margin-top: 10%;
+  margin-right: 220px;
+}
+
+#luis{
+  padding-left: 15%;
 }
 
 
