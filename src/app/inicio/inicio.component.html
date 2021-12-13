@@ -66,7 +66,7 @@
           href="#todasPostagens" role="tab" aria-controls="todasPostagens" aria-selected="true">Todas as Postagens</a>
       </li>
       <li class="nav-item " role="presentation">
-        <a class="nav-link text-secondary font-weight-bold" id="minhasPostagens-tab" data-toggle="tab"
+        <a (click)='findByIdUser()' class="nav-link text-secondary font-weight-bold" id="minhasPostagens-tab" data-toggle="tab"
           href="#minhasPostagens" role="tab" aria-controls="minhasPostagens" aria-selected="false">Minhas Postagens</a>
       </li>
       <li class="nav-item" role="presentation">
@@ -79,24 +79,56 @@
       <div class="tab-pane fade show active" id="todasPostagens" role="tabpanel" aria-labelledby="todasPostagens-tab">
 
         <!-- COLUNA DE CARDS -->
-        <div class="card-columns">
+        <div class="card-columns mt-4">
           <div class="card text-center" *ngFor='let item of listaPostagem'>
             <div class="card-body">
-              <h5 class="card-title">{{item.titulo}}</h5>
+              <h5 class="card-title m-0">{{item.titulo}}</h5>
               <small class="text-muted">Tema: {{item.tema.descricao}}</small>
-              <p class="card-text">{{item.texto}}</p>
-              <p class="card-text"><small class="text-muted">{{item.date | date: 'dd/MM/yyyy'}} às {{item.date | date: 'HH:mm'}}</small></p>
+              <p class="card-text mt-3">{{item.texto}}</p>
+              <p class="card-text"><small class="text-muted">{{item.date | date: 'dd/MM/yyyy'}} às {{item.date | date:
+                  'HH:mm'}}</small></p>
+              <p class="card-text"><small class="text-muted">por: {{item.usuario.nome}}</small></p>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tab-pane fade" id="minhasPostagens" role="tabpanel" aria-labelledby="minhasPostagens-tab">
+
+        <!-- COLUNA DE CARDS -->
+        <div class="card-columns">
+          <div class="card text-center" *ngFor='let item of user.postagem'>
+            <div class="card-body">
+              <h5 class="card-title m-0">{{item.titulo}}</h5>
+              <small class="text-muted">Tema: {{item.tema.descricao}}</small>
+              <p class="card-text mt-3">{{item.texto}}</p>
+              <p class="card-text"><small class="text-muted">{{item.date | date: 'dd/MM/yyyy'}} às {{item.date | date:
+                  'HH:mm'}}</small></p>
+
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tab-pane fade" id="postagemTema" role="tabpanel" aria-labelledby="postagemTema-tab">
+
+        <!-- COLUNA DE CARDS -->
+        <div class="card-columns" *ngFor='let tema of listaTemas'>
+          <div class="card text-center" *ngFor='let item of tema.postagem'>
+            <div class="card-body">
+              <h5 class="card-title m-0">{{item.titulo}}</h5>
+              <p class="card-text mt-3">{{item.texto}}</p>
+              <p class="card-text"><small class="text-muted">{{item.date | date: 'dd/MM/yyyy'}} às {{item.date | date:
+                  'HH:mm'}}</small></p>
               <p class="card-text"><small class="text-muted">por: {{item.usuario.nome}}</small></p>
 
             </div>
           </div>
         </div>
 
-      </div>
-      <div class="tab-pane fade" id="minhasPostagens" role="tabpanel" aria-labelledby="minhasPostagens-tab">
-        bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb</div>
-      <div class="tab-pane fade" id="postagemTema" role="tabpanel" aria-labelledby="postagemTema-tab">
-        cccccccccccccccccccccccccccccccccccccccccccccccccccccccccc</div>
+        </div>
     </div>
 
   </div>
@@ -120,12 +152,13 @@
 
           <div class="form-group">
             <label for="titulo">Título</label>
-            <input [(ngModel)]='postagem.titulo'  type="text" class="form-control" id="titulo" placeholder="Titulo">
+            <input [(ngModel)]='postagem.titulo' type="text" class="form-control" id="titulo" placeholder="Titulo">
           </div>
 
           <div class="form-group">
             <label for="texto">Texto</label>
-            <textarea [(ngModel)]='postagem.texto' class="form-control" name="" id="texto" cols="0" rows="3" placeholder="O texto deve ter no mínimo 15 caracteres"></textarea>
+            <textarea [(ngModel)]='postagem.texto' class="form-control" name="" id="texto" cols="0" rows="3"
+              placeholder="O texto deve ter no mínimo 15 caracteres"></textarea>
           </div>
 
           <div class="form-group">
