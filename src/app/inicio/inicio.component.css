@@ -8,7 +8,7 @@
 
 #bg-color{
   background-color: rgb(243, 242, 239, 1);
-  height: 100vh;
+  min-height: 100vh;
 
 }
 
