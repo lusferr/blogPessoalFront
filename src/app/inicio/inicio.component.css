@@ -1,5 +1,5 @@
-.fs-54{
-  font-size: 54pt;
+.fs-22{
+  font-size: 22pt;
 }
 
 .fs-18{
@@ -8,4 +8,47 @@
 
 #bg-color{
   background-color: rgb(243, 242, 239, 1);
+  height: 100vh;
+
 }
+
+#caixaPerfil{
+  background-color: #ffffff;
+  margin-top: 40px;
+  box-shadow: 0 0 5px 0 rgb(126, 125, 125);
+  border-radius: 10px;
+}
+
+
+#caixaDireita{
+  background-color: #ffffff;
+  margin-top: 40px;
+  box-shadow: 0 0 5px 0 rgb(126, 125, 125);
+  border-radius: 10px;
+}
+
+#caixaMeio{
+  background-color: #ffffff;
+  margin-top: 40px;
+  box-shadow: 0 0 5px 0 rgb(126, 125, 125);
+  border-radius: 10px;
+  margin-right: 5%;
+  margin-left: 5%;
+}
+
+#btnPubli{
+  border-radius: 1rem;
+  background-color: rgb(243, 242, 239, 1);
+  box-shadow: 0 0 5px 0 rgb(126, 125, 125);
+}
+#btnPubli:hover {
+  background-color: rgb(192, 191, 189);
+}
+
+#postagens{
+  /* padding-bottom: 320px; */
+
+}
+
+
+
