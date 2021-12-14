@@ -28,7 +28,7 @@
       aria-haspopup="true" aria-expanded="false">
     </i>
     <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
-      <button class="dropdown-item" type="button">Editar perfil</button>
+      <button [routerLink]="['/user-edit', id]" class="dropdown-item" type="button">Editar perfil</button>
       <p class="dropdown-item" type="button"><a (click)='sair()' class="m-0 ">Sair</a></p>
 
     </div>
