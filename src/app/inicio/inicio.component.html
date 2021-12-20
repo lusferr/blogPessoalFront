@@ -79,12 +79,14 @@
     <div class="tab-content text-center" id="myTabContent">
       <div class="tab-pane fade show active" id="todasPostagens" role="tabpanel" aria-labelledby="todasPostagens-tab">
 
-        <!-- COLUNA DE CARDS -->
+        <!-- 1° COLUNA DE CARDS -->
         <div class="card-columns mt-4 ">
           <div class="card text-center" *ngFor='let item of listaPostagem'>
             <div class="card-body">
               <h5 class="card-title m-0">{{item.titulo}}</h5>
-              <small class="text-muted">Tema: {{item.tema.descricao}}</small>
+
+              <p><small class="text-muted">Tema: {{item.tema.descricao}}</small></p>
+              
               <p class="card-text mt-3">{{item.texto}}</p>
               <p class="card-text"><small class="text-muted">{{item.date | date: 'dd/MM/yyyy'}} às {{item.date | date:
                   'HH:mm'}}</small></p>
@@ -97,7 +99,7 @@
 
       <div class="tab-pane fade" id="minhasPostagens" role="tabpanel" aria-labelledby="minhasPostagens-tab">
 
-        <!-- COLUNA DE CARDS -->
+        <!-- 2° COLUNA DE CARDS -->
         <div class="card-columns mt-4">
           <div class="card text-center" *ngFor='let item of user.postagem'>
             <div class="card-body">
@@ -118,7 +120,7 @@
 
       <div class="tab-pane fade" id="postagemTema" role="tabpanel" aria-labelledby="postagemTema-tab">
 
-        <!-- COLUNA DE CARDS -->
+        <!-- 3° COLUNA DE CARDS -->
 
 
         <div class="card-columns mt-4" *ngFor='let tema of listaTemas'>
@@ -128,6 +130,8 @@
               <p class="card-text mt-3">{{item.texto}}</p>
               <p class="card-text"><small class="text-muted">{{item.date | date: 'dd/MM/yyyy'}} às {{item.date | date:
                   'HH:mm'}}</small></p>
+
+                  <p class="card-text"><small class="text-muted">por: {{item.usuario.nome}}</small></p>
 
 
             </div>
